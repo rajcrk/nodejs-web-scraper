@@ -15,7 +15,7 @@
 <!--  ==================================================== -->
 	<% for(var i = 1;i <= N;i++){ %>
 	 <tr>
-	 	<% if(keysSorted[i] == ""){ %>
+	 	<% if(keysSorted[i] == "" || (keysSorted[i].charCodeAt(0) > 122) || keysSorted[i].charCodeAt(0) < 97){ %>
 		<% }else{ %>
 		<td>
 	 		<%= count++ %>
