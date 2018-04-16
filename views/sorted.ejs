@@ -1,0 +1,32 @@
+<% include partials/header %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+
+<div class="container" id="sorted-wrapper">
+	<h3>The top <%= N %> occuring words are</h3><br>
+	<table class="table">
+	 <tr>
+	 	<th>No</th>
+	  	<th>Word</th>
+	  	<!-- <th>Occurence</th> -->
+	 </tr>
+	 <% var count = 1; %>
+	 <% for(var i = 0;i < N;i++){ %>
+	 <tr>
+	 		<% if(keysSorted[i] == ""){ %>
+
+	 		<% }else{ %>
+
+	 		
+	 		<td>
+	 			<%= count++ %>
+	 		</td>
+	 		<td>
+	 			<%= keysSorted[i] %>
+	 		</td>
+	 <%	} %>
+	 </tr>
+	 <% } %>
+
+	</table><br><br>
+	<h3> That's the end! :-) </h3>
+</div>
