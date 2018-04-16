@@ -2,7 +2,8 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
 
 <div class="container" id="sorted-wrapper">
-	<h3>The top <%= N %> occuring words are</h3><br>
+	<% if(N < keysSorted.length && N > 0){ %>
+	<h3>The top <%= typeof N %> occuring words are</h3><br>
 	<table class="table">
 	 <tr>
 	 	<th>No</th>
@@ -10,23 +11,32 @@
 	  	<!-- <th>Occurence</th> -->
 	 </tr>
 	 <% var count = 1; %>
-	 <% for(var i = 0;i < N;i++){ %>
+	<% for(var i = 0;i < N;i++){ %>
 	 <tr>
-	 		<% if(keysSorted[i] == ""){ %>
-
-	 		<% }else{ %>
-
-	 		
-	 		<td>
-	 			<%= count++ %>
-	 		</td>
-	 		<td>
-	 			<%= keysSorted[i] %>
-	 		</td>
+	 	<% if(keysSorted[i] == ""){ %>
+		<% }else{ %>
+		<td>
+	 		<%= count++ %>
+	 	</td>
+	 	<td>
+	 		<%= keysSorted[i] %>
+	 	</td>
 	 <%	} %>
 	 </tr>
-	 <% } %>
+	<% } %>
 
 	</table><br><br>
 	<h3> That's the end! :-) </h3>
+<!-- The End of checking for length == 0 -->
+<% }else{ %>
+ <!-- // ================================= //-->
+<!-- 	// When An Invalid input is provided //-->
+<!--  // ================================= //-->
+<div class="alert alert-danger" role="alert"><strong>Oh Snap</strong>,Change a few things up and try submitting again.<br>The reason for this error might be!</div>
+<ul class="list-group">
+  <li class="list-group-item">An Invalid Input is Provided</li>
+  <li class="list-group-item">No such occurences is available!</li>
+</ul>
+
+<% } %>
 </div>
