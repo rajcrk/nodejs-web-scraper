@@ -6,3 +6,8 @@
 	width: 40%;
 	margin-top: 2em;
 }
+
+#lighter {
+	font-family: Open Sans;
+	font-weight: lighter;
+}

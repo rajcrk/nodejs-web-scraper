@@ -3,15 +3,17 @@
 
 <div class="container" id="sorted-wrapper">
 	<% if(N < keysSorted.length && N > 0){ %>
-	<h3>The top <%= typeof N %> occuring words are</h3><br>
+	<h3 id="lighter">The top <strong><%= N %></strong> occuring words are</h3><br>
 	<table class="table">
 	 <tr>
 	 	<th>No</th>
 	  	<th>Word</th>
-	  	<!-- <th>Occurence</th> -->
-	 </tr>
-	 <% var count = 1; %>
-	<% for(var i = 0;i < N;i++){ %>
+	</tr>
+	<% var count = 1; %>
+<!--  ==================================================== -->
+<!--  Looping Till the end of the sorted Array keysSorted  -->
+<!--  ==================================================== -->
+	<% for(var i = 1;i <= N;i++){ %>
 	 <tr>
 	 	<% if(keysSorted[i] == ""){ %>
 		<% }else{ %>
@@ -24,15 +26,23 @@
 	 <%	} %>
 	 </tr>
 	<% } %>
+<!-- ===================== -->
+<!--  Ending of the loop   -->
+<!-- ===================== -->
 
 	</table><br><br>
-	<h3> That's the end! :-) </h3>
-<!-- The End of checking for length == 0 -->
+	<h3 id="lighter"> That's the end! :-) </h3>
+<!-- =============================================================== -->	
+<!-- The End of N is greater then 0 and N is less than total Length  -->
+<!-- =============================================================== -->
 <% }else{ %>
- <!-- // ================================= //-->
-<!-- 	// When An Invalid input is provided //-->
-<!--  // ================================= //-->
-<div class="alert alert-danger" role="alert"><strong>Oh Snap</strong>,Change a few things up and try submitting again.<br>The reason for this error might be!</div>
+<!--  ================================= -->
+<!--  When An Invalid input is provided -->
+<!--  ================================= -->
+<div class="alert alert-danger" role="alert">
+	<strong>Oh Snap</strong>,Change a few things up and try submitting again.<br>
+	The reason for this error might be!
+</div>
 <ul class="list-group">
   <li class="list-group-item">An Invalid Input is Provided</li>
   <li class="list-group-item">No such occurences is available!</li>
