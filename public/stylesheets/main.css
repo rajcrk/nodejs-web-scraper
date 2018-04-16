@@ -11,3 +11,13 @@
 	font-family: Open Sans;
 	font-weight: lighter;
 }
+#nav-head{
+	width: 100%;
+	padding: 2em;
+	background-color: #000000;
+}
+#brand{
+	color: white;
+	font-weight: lighter;
+	font-size: 26px;
+}
