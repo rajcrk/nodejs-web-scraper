@@ -1,5 +1,5 @@
 # Terribly Tiny Tales
-Submission for ttt Software Engineer Internship<br>
+Submission for Software Engineer Internship at ttt<br>
 
 ![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)
 
