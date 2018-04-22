@@ -12,7 +12,7 @@ Libraries and Plugins used:
   <li>mongoose</li>
   <li>node-fetch</li>
 </ul>
-Trying my best to explain the components of the code
+Trying my best(well kind of) to explain the components of the code
 Importing all npm modules
 
 ```javascript
