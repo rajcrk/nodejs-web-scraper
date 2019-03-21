@@ -1,5 +1,5 @@
 # Terribly Tiny Tales
-Submission for Software Engineer Internship at ttt<br>
+Node based web scraping tool to display the top N occuring words in a site. Data Analyst beware, here comes the ultimate word counter<br>
 
 ![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)
 
@@ -38,10 +38,10 @@ app.get("/", function(req, res){
 	res.render("index");
 });
 ```
-index page aka ( The main screen ), sorry for the theme copy from your website I just couldn't help it, it was neat.
+Index page aka ( The main screen ).
 ![alt text](https://github.com/rajcrk/ttt-se-intern/blob/master/public/img/screencapture-localhost-3380-1523878721682.png)
 
-submission from the above page leds to a POST request of the /submit page
+Submission from the above page leds to a POST request of the /submit page
 
 ```javascript
 app.post("/submit", function(req, res){
@@ -74,7 +74,7 @@ A loop is created to loop until the end of all words and the word count is store
 for(var i = 0;i < words.length;i++)
 			wordCount[words[i].toLowerCase()] = (wordCount[words[i].toLowerCase()] || 0) + 1;
 ```
-the wordCount object model has the property as word and the value as occurence 
+The wordCount object model has the property as word and the value as occurence 
 ```javascript
 {
   "word": occurence
